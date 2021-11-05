@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://guess.gd" type="Script" id=1]
+
+[node name="guess" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -20.0
+margin_right = 40.0
+margin_bottom = 20.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 30.0
+margin_bottom = 40.0
+alignment = 1
+
+[node name="c1" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 30.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 30.0
+margin_right = 40.0
+margin_bottom = 40.0
+alignment = 1
+
+[node name="c2" type="ColorRect" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 15.0
+margin_right = 10.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 10, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="HBoxContainer"]
+margin_left = 40.0
+margin_top = 13.0
+margin_right = 58.0
+margin_bottom = 27.0
+text = "AB"
