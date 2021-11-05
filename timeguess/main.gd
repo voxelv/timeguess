@@ -29,7 +29,19 @@ const guesses := {
 }
 
 func _ready():
+	setup_labels()
+	get_tree().get_root().connect("size_changed", self, "setup_labels_y")
+
+func setup_labels_y():
+	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame")
+	setup_labels()
+
+func setup_labels():
 	var ofst = 20
+	for c in labels.get_children():
+		c.queue_free()
 	for guess_name in guesses.keys():
 		var guess = guesses[guess_name]
 		var g = guess_preload.instance() as Control

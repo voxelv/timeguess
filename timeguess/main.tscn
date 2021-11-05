@@ -38,13 +38,6 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="labels" type="Control" parent="ui"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="GridContainer" type="VBoxContainer" parent="ui"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -244,6 +237,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 
+[node name="labels" type="Control" parent="ui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="ui"]
 modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
 anchor_left = 1.0
@@ -281,3 +281,6 @@ text = "Saturday 12:00pm"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="timer" type="Timer" parent="."]
+autostart = true
